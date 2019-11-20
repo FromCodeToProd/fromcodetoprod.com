@@ -1,0 +1,29 @@
+---
+baseURL: https://fromcodetoprod.com/
+languageCode: en-us
+title: From Code to Prod
+
+theme: hyde-hyde
+
+# https://gohugo.io/about/hugo-and-gdpr/
+privacy:
+  disqus:
+    disable: true
+  googleAnalytics:
+    anonymizeIP: true
+    disable: true
+    respectDoNotTrack: true
+    useSessionStorage: true
+  instagram:
+    disable: true
+    simple: true
+  twitter:
+    disable: true
+    enableDNT: true
+    simple: true
+  vimeo:
+    disable: true
+    simple: true
+  youtube:
+    disable: true
+    privacyEnhanced: true

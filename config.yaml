@@ -9,7 +9,8 @@ title: From Code to Prod
 # theme: hugo-lamp
 # theme: hugo-theme-pure
 # theme: hyde-hyde
-theme: minimal
+# theme: minimal
+theme: our-hyde
 
 # https://gohugo.io/content-management/multilingual/
 defaultContentLanguage: en

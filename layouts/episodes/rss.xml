@@ -18,23 +18,23 @@
         <itunes:image href="{{ .Site.Params.Image }}" />
         <itunes:category text="Technology" />
 
-        {{ range .Data.Episodes }}
-
+        {{ range .Pages }}
+        {{ if eq .Lang $.Lang }}
         <item>
             <title>{{ .Date }}</title>
-            <itunes:author>{{ .Site.Params.Itunes.Author }}</itunes:author>
+            <itunes:author>{{ $.Site.Params.Itunes.Author }}</itunes:author>
 
-            <itunes:summary><![CDATA[{{ .Content }}]></itunes:summary>
-            <description><![CDATA[{{ .Content }}]></description>
+            <itunes:summary>{{ `<![CDATA[` | safeHTML }}{{ .Content }}{{ `]]>` | safeHTML }}</itunes:summary>
+            <description>{{ `<![CDATA[` | safeHTML }}{{ .Content }}{{ `]]>` | safeHTML }}</description>
 
-            <enclosure url="{{ .Link }}" length="{{ .Length}}" type="audio/mpeg" />
-            <guid>{{ .Link }}</guid>
+            <enclosure url="{{ .Params.link }}" length="{{ .Params.length}}" type="audio/mpeg" />
+            <guid>{{ .Params.link }}</guid>
             <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
 
-            <itunes:duration>{{ .Duration }}</itunes:duration>
+            <itunes:duration>{{ .Params.duration }}</itunes:duration>
             <link>{{ .Permalink }}</link>
         </item>
-
+        {{ end }}
         {{ end }}
   </channel>
 </rss>

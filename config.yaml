@@ -18,8 +18,26 @@ defaultContentLanguageInSubdir: true
 languages:
   en:
     weight: 1
+    title: From Code To Prod Podcast
+    params:
+      copyright: Copyright 2019 From Code To Prod
+      image:
+      description:
+      itunes:
+        subtitle:
+        author: Alexey Palazhchenko, Elena Grahovac
+        owner:
+          name: From Code To Prod Podcast
+          email: hello@fromcodetoprod.com
   ru:
     weight: 2
+    title: Подкаст От кода до прода
+    params:
+      copyright: Copyright 2019 From Code To Prod
+      description:
+      itunes:
+        subtitle:
+        author:
 
 languageCode: en-us
 

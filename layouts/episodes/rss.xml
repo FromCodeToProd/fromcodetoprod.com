@@ -1,0 +1,40 @@
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+    <channel>
+        <title>{{ .Title }}</title>
+        <link>{{ .Permalink }}</link>
+        <language>{{ .Site.LanguageCode }}</language>
+        <copyright>{{ .Site.Params.Copyright }}</copyright>
+
+        <itunes:subtitle>{{ .Site.Params.Itunes.Subtitle }}</itunes:subtitle>
+        <itunes:summary>{{ .Site.Params.Description }}</itunes:summary>
+        <description>{{ .Site.Params.Description }}</description>
+
+        <itunes:author>{{ .Site.Params.Itunes.Author }}</itunes:author>
+        <itunes:owner>
+            <itunes:name>{{ .Site.Params.Itunes.Owner.Name }}</itunes:name>
+            <itunes:email>{{ .Site.Params.Itunes.Owner.Email }}</itunes:email>
+        </itunes:owner>
+
+        <itunes:image href="{{ .Site.Params.Image }}" />
+        <itunes:category text="Technology" />
+
+        {{ range .Data.Episodes }}
+
+        <item>
+            <title>{{ .Date }}</title>
+            <itunes:author>{{ .Site.Params.Itunes.Author }}</itunes:author>
+
+            <itunes:summary><![CDATA[{{ .Content }}]></itunes:summary>
+            <description><![CDATA[{{ .Content }}]></description>
+
+            <enclosure url="{{ .Link }}" length="{{ .Length}}" type="audio/mpeg" />
+            <guid>{{ .Link }}</guid>
+            <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+
+            <itunes:duration>{{ .Duration }}</itunes:duration>
+            <link>{{ .Permalink }}</link>
+        </item>
+
+        {{ end }}
+  </channel>
+</rss>

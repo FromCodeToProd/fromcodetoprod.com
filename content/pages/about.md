@@ -1,7 +1,7 @@
 ---
 title: "About"
 date: 2019-11-21T09:00:00+03:00
-draft: false
+draft: true
 ---
 
 About this site.

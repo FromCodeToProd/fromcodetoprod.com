@@ -1,0 +1,54 @@
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+    <channel>
+        <title>От кода до прода</title>
+        <link>https://fromcodetoprod.com/</link>
+        <language>ru-ru</language>
+        <copyright>Copyright 2019 От кода до прода</copyright>
+
+        <itunes:subtitle>От кода до прода</itunes:subtitle>
+        <itunes:summary>От кода до прода</itunes:summary>
+        <description>От кода до прода</description>
+
+        <itunes:author>Алексей Палажченко, Елена Граховац</itunes:author>
+        <itunes:owner>
+            <itunes:name>From Code To Prod Podcast</itunes:name>
+            <itunes:email>hello@fromcodetoprod.com</itunes:email>
+        </itunes:owner>
+
+        <itunes:image href="" />
+        <itunes:category text="Technology" />
+
+        <item>
+            <title>001. Управление зависимостями</title>
+            <itunes:author>Алексей Палажченко, Елена Граховац</itunes:author>
+
+            <itunes:summary><![CDATA[
+[00:00:00] Куда пропал подкаст GolangShow?<br>
+[00:01:28] Пара слов о ведущих. Кто мы?<br>
+[00:03:18] Управление зависимостями. В чем проблема? Когда и как обновляться?<br>
+[00:12:51] Есть ли будущее у go dep? Текущие проблемы go modules и транзитивных зависимостей. Можно ли избавиться от vendor?<br>
+[00:20:01] Разработка в контейнерах, devcontainer от vscode <br>
+[00:26:38] Интервью с Барухом (JFrog), записанное в начале 2019 года<br>
+[01:09:03] Что изменилось в Go, Gocenter и других прокси с момента интервью: proxy.golang.org, go.dev, pkg.go.dev<br>
+]]></itunes:summary>
+            <description><![CDATA[
+[00:00:00] Куда пропал подкаст GolangShow?<br>
+[00:01:28] Пара слов о ведущих. Кто мы?<br>
+[00:03:18] Управление зависимостями. В чем проблема? Когда и как обновляться?<br>
+[00:12:51] Есть ли будущее у go dep? Текущие проблемы go modules и транзитивных зависимостей. Можно ли избавиться от vendor?<br>
+[00:20:01] Разработка в контейнерах, devcontainer от vscode <br>
+[00:26:38] Интервью с Барухом (JFrog), записанное в начале 2019 года<br>
+[01:09:03] Что изменилось в Go, Gocenter и других прокси с момента интервью: proxy.golang.org, go.dev, pkg.go.dev<br>
+]]></description>
+
+            <enclosure url="http://storage.yandexcloud.net/fromcodetoprod/episodes/001.mp3" length="56283973" type="audio/mpeg" />
+            <guid>static.fromcodetoprod.com/episodes/001.mp3</guid>
+            <pubDate>Wed, 30 Nov 2019 15:00:00 +0300</pubDate>
+
+            <itunes:duration>01:18:09</itunes:duration>
+            <link>https://fromcodetoprod.com/</link>
+        </item>
+        
+        
+  </channel>
+</rss>

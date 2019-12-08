@@ -1,0 +1,31 @@
+name: CI
+on: [push, pull_request]
+
+jobs:
+  test:
+    name: Test URLs
+    runs-on: ubuntu-18.04
+
+    steps:
+    - name: Setup Go
+      uses: actions/setup-go@v1
+      with:
+        go-version: 1.13.x
+
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: Test URLs on production
+      run: go run scripts/test-urls.go https://fromcodetoprod.com/
+
+    - name: Setup Hugo
+      run: make hugo
+
+    - name: Serve local version
+      run: make serve &
+
+    - name: Wait
+      run: sleep 1
+
+    - name: Test local URLs
+      run: go run scripts/test-urls.go http://localhost:1313/
